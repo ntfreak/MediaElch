@@ -54,6 +54,7 @@ void XbmcXml::writeMovieXml(QXmlStreamWriter &xml, Movie *movie)
     xml.writeTextElement("votes", QString::number(movie->votes()));
     xml.writeTextElement("top250", QString::number(movie->top250()));
     xml.writeTextElement("year", movie->released().toString("yyyy"));
+    xml.writeTextElement("capturedate", movie->released().toString("yyyy-MM-dd"));
     xml.writeTextElement("plot", movie->overview());
     xml.writeTextElement("outline", movie->outline());
     xml.writeTextElement("tagline", movie->tagline());
